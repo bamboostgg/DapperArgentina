@@ -11,7 +11,6 @@ const linksList = [
   {name: "getting started", url: '/resources'},
 ];
 
-
 const App = class App extends React.Component {
   
   constructor(props) {
