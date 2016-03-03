@@ -5,7 +5,7 @@ const Repos = require('../js/repos');
 const Users = requrie('../js/users');
 
 const linksList = [
-  {name: "my profile", url: '/profile'}
+  {name: "my profile", url: '/profile'},
   {name: "tickets", url: '/'},
   {name: "repositories", url: '/repos'},
   {name: "getting started", url: '/resources'},
