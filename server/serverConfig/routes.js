@@ -87,18 +87,18 @@ module.exports = function(app, express) {
             User.makeNewUserAsync(userObj)
             .then(function(data) {
               console.log('new user created in db: ', data);
+              res.redirect('/')
             }).catch(utils.logError);
           } else {
 
             // If user is currently in db, update user data
             User.updateUserAsync(userObj)
             .then(function(data) {
+              res.redirect('/')
             }).catch(utils.logError);
           }
         }).catch(utils.logError);
       }).catch(utils.logError);
     }).catch(utils.logError);
-
-    res.redirect('/');
   });
 }
