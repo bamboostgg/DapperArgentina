@@ -27,6 +27,7 @@ class RepoProfile extends React.Component {
 
   favorRepo() {
     if(!this.isFavorite()) {
+      Materialize.toast("Added to Favorites!", 4000);
       $.post('/api/favorite', this.state.repoToRender, (data) => {
         this.props.getFavedRepos();
       });
