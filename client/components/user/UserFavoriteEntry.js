@@ -6,7 +6,6 @@ class UserFavoriteList extends React.Component {
   
   constructor(props) {
     super(props);
-
   }
 
   render() {
@@ -14,16 +13,15 @@ class UserFavoriteList extends React.Component {
     var unFavorite = () => {
       Materialize.toast(this.props.name + " was removed!", 4000)
       Favs.deleteFavedRepoFromApi(this.props.id);
-      this.icon = (<i className="material-icons right">loyalty</i>);
+      this.color = "grey-text lighten-2";
       this.render();
     }
-    icon = (<a><i className="material-icons right" onClick={unFavorite}>loyalty</i></a>)
-    
+      this.color = "cyan-text lighten-2";
   	return(
       <li className="user-favorite-entry">
         <div className="collapsible-header">
           <span>{this.props.data.name}</span>
-          {this.icon}
+          <i className="material-icons right {this.color}" onClick={unFavorite}>loyalty</i>
         </div>
         <div className="collapsible-body">
           <p> {this.props.data.org_name}<br/>

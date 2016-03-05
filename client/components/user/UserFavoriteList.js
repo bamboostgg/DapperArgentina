@@ -11,11 +11,9 @@ class UserFavoriteList extends React.Component {
   componentDidUpdate () {
     //Anytime the component renders, scroll to the top of the ticket list
     $('.main-favorite-view')[0].scrollTop = 0; 
-    console.log("initializing collapsibles") 
     $('.collapsible').collapsible();
   }
   componentDidMount () {
-     console.log("initializing collapsibles") 
     $('.collapsible').collapsible();
     Materialize.showStaggeredList('#user-favorite-repos')
   }
