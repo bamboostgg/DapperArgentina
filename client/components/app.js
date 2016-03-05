@@ -86,7 +86,7 @@ const App = class App extends React.Component {
   render () {
     return (
     <div className='app-shell grey lighten-2'>
-      <NavBar links={linksList}/>
+      <NavBar user={this.state.user} links={linksList}/>
       <div className="row">
         <div className="main col-md-12 container">
           {React.cloneElement(this.props.children, {
