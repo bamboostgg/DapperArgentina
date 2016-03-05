@@ -20,7 +20,7 @@ const NavBar = class NavBar extends React.Component {
           <div className="nav-wrapper container col s12 m4 l8">
             <a href="/#/profile">
               <i className="material-icons left">perm_identity</i>
-              {this.props.user.login}
+              <span>{this.props.user.login}<span>
             </a>
             <a id="logo-container" href="#" className="brand-logo left">best first ticket</a>
             <ul className="right hide-on-med-and-down">
